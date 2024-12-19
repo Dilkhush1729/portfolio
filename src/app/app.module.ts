@@ -6,7 +6,7 @@ import { ManagePortfolioModule } from './manage-portfolio/manage-portfolio-modul
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

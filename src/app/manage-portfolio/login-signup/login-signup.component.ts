@@ -11,8 +11,8 @@ import { EmailValidator } from '@angular/forms';
 })
 
 export class LoginSignupComponent {
-  isLoginForm: boolean = true;  // Initially showing the login form
-  userData = { name: '', email: '', password: '', confirmPassword: '' };  // For signup form
+  isLoginForm: boolean = true;
+  userData = { name: '', email: '', password: '', confirmPassword: '' };
 
   constructor(private userDataService: UserDataService,private router: Router) {}
 
@@ -25,7 +25,7 @@ export class LoginSignupComponent {
     const user = this.userDataService.getUserData(this.userData.email);
     if (user && user.password === this.userData.password && user.email === this.userData.email) {
       alert('Login Successful');
-      this.router.navigate(['/home-page']); 
+      this.router.navigate(['/dashboard']); 
     } else {
       alert('Please Enter a valid credentials');
     }
