@@ -1,29 +1,38 @@
 <footer>
-    <div class="footer-container">
-      <div class="footer-logo">
-        <h1>Dilkhush Kumar</h1>
-      </div>
-  
-      <div class="footer-links">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Education</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
-      </div>
-  
-      <div class="footer-socials">
-        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-      </div>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h1>Dilkhush Kumar</h1>
     </div>
-    <hr style="margin: 2% 5%;">
-    <div class="footer-bottom">
-      <p>&copy; 2024 Dilkhush Kumar. All rights reserved.</p>
+
+    <div class="footer-links">
+      <ul>
+        <li *ngIf="userLoggedin">
+          <a [class.active]="currentRoute == '/dashboard'" routerLink="/dashboard">Home</a>
+        </li>
+        <li *ngIf="userLoggedin">
+          <a [class.active]="currentRoute == '/about'" routerLink="/about">About</a>
+        </li>
+        <li *ngIf="userLoggedin">
+          <a [class.active]="currentRoute == '/projects'" routerLink="/projects">Works</a>
+        </li>
+        <li *ngIf="userLoggedin">
+          <a [class.active]="currentRoute == '/skills'" routerLink="/skills">Skills</a>
+        </li>
+        <li *ngIf="userLoggedin">
+          <a [class.active]="currentRoute == '/connect-with-me'" routerLink="/connect-with-me">Contacts</a>
+        </li>
+      </ul>
     </div>
-  </footer>
-  
+
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/profile.php?id=100094422398124" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/DilkhushKu96834" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="www.linkedin.com/in/𝑫𝒊𝒍𝒌𝒉𝒖𝒔𝒉-𝑲𝒖𝒎𝒂𝒓-02a113239" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/Dilkhush1729" class="social-icon"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+  <hr style="margin: 2% 5%;">
+  <div class="footer-bottom">
+    <p>&copy; 2024 Dilkhush Kumar. All rights reserved.</p>
+  </div>
+</footer>

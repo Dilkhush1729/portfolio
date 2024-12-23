@@ -1,0 +1,112 @@
+.project_container {
+  width: 100%;
+  padding: 5%;
+  background-color: #f8f9fa17;
+
+  h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  .para{
+    padding: 1% 2% 5% 2%;
+    text-align: center;
+  }
+
+  .project_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    .project {
+      width: 100%;
+      position: relative;
+      width: 300px;
+      height: 400px;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .img_description {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Overlay color */
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+
+        h3 {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+
+        button {
+          padding: 10px 15px;
+          // background-color: #007bff;
+          background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #0056b3;
+          }
+          a{
+            color: #fff;
+          }
+          &:hover{
+            color: #fff;
+          }
+        }
+      }
+
+      &:hover img {
+        transform: scale(1.1); /* Slight zoom on hover */
+      }
+
+      .img_description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project_list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 90%;
+    height: auto;
+  }
+}

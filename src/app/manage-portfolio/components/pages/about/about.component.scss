@@ -1,0 +1,137 @@
+.about_container {
+    width: 100%;
+    display: flex;
+    padding: 5%;
+    gap: 2%;
+    background-color: #f9f9f9; // Subtle background color for the container
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    @media(max-width:1024px) {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 60px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 15%;
+    }
+    @media(max-width:768px) {
+        padding-top: 15%;
+    }
+    .left_part {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .about-me__image {
+            text-align: center;
+            background-image: url("/assets/images/WhatsApp Image 2024-12-14 at 20.20.57_06d18479.jpg");
+            width: 400px;
+            height: 400px;
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+
+            img {
+                width: 250px;
+                height: 250px;
+                position: relative;
+                top: 264px;
+                right: 173px;
+                transition: all 0.3s ease-out 0s;
+                animation: rotation 10s infinite linear;
+            }
+
+            #download_icon {
+                position: relative;
+                top: 143px;
+                right: 309px;
+                color: green;
+                font-size: 25px;
+                @media(max-width:611px){
+                    top: 117px;
+                    right: 173px;
+                }
+            }
+        }
+    }
+
+    .right_part {
+        width: 50%;
+        padding: 20px;
+        @media(max-width:1024px) {
+          width: 100%;
+          text-align: center;
+        }
+
+        h5 {
+            font-size: 18px;
+            letter-spacing: 5px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ddd;
+            margin: 20px 0;
+        }
+
+        .my_details {
+            display: flex;
+            gap: 20px;
+            @media (max-width: 426px) {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+            }
+
+            .left,
+            .right {
+                width: 45%;
+
+                p {
+                    margin-bottom: 10px;
+
+                    b {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #333;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        color: #555;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Keyframes for rotation */
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

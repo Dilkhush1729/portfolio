@@ -1,12 +1,11 @@
 // Global styles for the footer
 footer {
-    background-color: #25262f;
+    background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
     color: #fff;
     font-family: 'Arial', sans-serif;
     padding: 40px 0;
     overflow: hidden;
     animation: fadeIn 1s ease-out;
-  
     .footer-container {
       display: flex;
       justify-content: space-between;
@@ -47,17 +46,6 @@ footer {
   
             &:hover {
               color: #f39c12;
-            }
-  
-            &::after {
-              content: '';
-              position: absolute;
-              width: 0;
-              height: 2px;
-              background: #f39c12;
-              left: 0;
-              bottom: -5px;
-              transition: width 0.3s;
             }
   
             &:hover::after {

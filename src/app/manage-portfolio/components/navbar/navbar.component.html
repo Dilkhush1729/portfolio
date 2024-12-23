@@ -8,15 +8,26 @@
   </label>
 
   <!-- Site logo -->
-  <label class="logo">Dilkhush Kumar</label>
+  <label class="logo">[ Dilkhush Kumar ]</label>
 
   <!-- Navigation links -->
   <ul>
-    <li><a class="active" href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Works</a></li>
-    <li><a href="#">Education</a></li>
-    <li><a href="#">Contacts</a></li>
-    <li><button>DOWNLOAD CV</button></li>
+    <li *ngIf="userLoggedin">
+      <a [class.active]="currentRoute == '/dashboard'" routerLink="/dashboard">Home</a></li>
+    <li *ngIf="userLoggedin">
+      <a [class.active]="currentRoute == '/about'" routerLink="/about">About</a></li>
+    <li *ngIf="userLoggedin">
+      <a [class.active]="currentRoute == '/projects'" routerLink="/projects">Works</a></li>
+    <li *ngIf="userLoggedin">
+      <a [class.active]="currentRoute == '/skills'" routerLink="/skills">Skills</a></li>
+    <li *ngIf="userLoggedin">
+      <a [class.active]="currentRoute == '/connect-with-me'" routerLink="/connect-with-me">Contacts</a></li>
+    <li>
+      <a>
+        <i class="fas fa-sign-out-alt"></i> 
+        <span (click)="logout()" *ngIf="userLoggedin">Logout</span>
+        <span *ngIf="!userLoggedin" routerLink="">LogIn</span>
+      </a>
+    </li>
   </ul>
 </nav>

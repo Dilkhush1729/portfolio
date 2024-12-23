@@ -1,0 +1,129 @@
+.education_container {
+    display: flex;
+    padding: 8%;
+    gap: 2%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    @media (max-width: 1025px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;  
+      gap: 50px;
+    }
+  
+    .left {
+      width: 50%;
+      @media (max-width: 1025px) {
+        width: 90%;
+      }
+      h6 {
+        font-size: 16px;
+        color: #555;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+      }
+  
+      h2 {
+        font-size: 36px;
+        font-weight: 600;
+        color: chocolate;
+        margin-bottom: 20px;
+      }
+  
+      .edu_para{
+        font-size: 16px;
+        color: #666666c1;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 1025px) {
+        h6,h2,.edu_para{
+          text-align: center;
+        }
+      }
+  
+      .edu_details {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+  
+        .details_card {
+          display: flex;
+          gap: 15px;
+          padding: 25px 15px 15px 15px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  
+          .icon{
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
+            border-radius: 10px;
+            font-size: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // margin-top: 2%;
+            i#icons{
+              font-size: 22px;
+              color: #fff;
+            }
+          }
+  
+          .content {
+            h3 {
+              font-size: 18px;
+              font-weight: 600;
+              color: #333;
+              margin-bottom: 5px;
+            }
+  
+            .edu_place {
+              font-size: 14px;
+              color: #666666d1;
+              margin-bottom: 10px;
+  
+              b {
+                font-weight: bold;
+                color: #333;
+              }
+  
+              .year {
+                color: #999;
+              }
+            }
+  
+            p {
+              font-size: 14px;
+              color: #555555e0;
+              line-height: 1.6;
+            }
+            @media (max-width: 1025px) {
+              text-align: start !important;
+            }
+          }
+        }
+      }
+    }
+  
+    .right {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 1025px) {
+        display: none;
+      }
+      img {
+        width: 75%;
+        height: 636px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  

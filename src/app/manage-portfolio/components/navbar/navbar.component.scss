@@ -1,12 +1,12 @@
 nav {
   font-family: "Montserrat", sans-serif;
-  background: #25262f;
+  background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
   height: 80px;
   width: 100%;
   text-decoration: none;
   position: fixed;
   padding: 1.2% 0% auto;
-
+  z-index: 10;
   label {
     &.logo {
       color: white;
@@ -37,6 +37,7 @@ nav {
         text-decoration: none;
         position: relative;
         transition: all 0.3s ease-in-out;
+        cursor: pointer;
         &::after {
           content: '';
           position: absolute;
@@ -44,42 +45,25 @@ nav {
           left: 0;
           width: 0;
           height: 2px;
-          background-color: #ffffff;
+          background-color: #f39c12;
           transition: width 0.3s ease-in-out;
         }
         &:hover {
-          color: #ffffff;
+          color: #f39c12;
           box-shadow: 0 4px 10px rgba(0, 130, 230, 0.479);
           transform: translateY(-3px);
         }
         &.active {
-          color: #ffffff;
+          color: #f39c12;
           background: none;
         }
 
-        /* Animate underline on hover or when active */
         &:hover::after,
         &.active::after {
           width: 100%;
         }
-      }
-
-      button {
-        padding: 8px 20px 7px 20px;
-        font-size: 15px;
-        border: 1px solid #ffffff;
-        font-weight: 700;
-        color: #ffffff;
-        border-radius: 5%;
-        -webkit-border-radius: 5px;
-        background-color: #25262f;
-        cursor: pointer;
-        transition: all 0.3s ease-out;
-        
-        &:hover {
-          background-color: #ffffff;
-          color: #25262f;
-          transform: scale(1.1);
+        span{
+          padding-left: 8px;
         }
       }
     }
@@ -122,7 +106,8 @@ nav {
       position: fixed;
       width: 100%;
       height: 100vh;
-      background: #25262f;
+      // background: #25262f;
+      background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
       top: 80px;
       left: -100%;
       text-align: center;
@@ -142,7 +127,7 @@ nav {
           &:hover,
           &.active {
             background: none;
-            color: #0082e6;
+            color: #f39c12;
           }
         }
       }
@@ -154,8 +139,6 @@ nav {
     }
   }
 }
-
-// Animations
 
 @keyframes fadeIn {
   0% {
@@ -184,7 +167,7 @@ nav {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
   }
 }
 

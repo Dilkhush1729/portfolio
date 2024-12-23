@@ -1,0 +1,43 @@
+<div class="contact_me_container">
+  <h3>Connect With Me </h3>
+  <h2>Let’s Start A New Journey</h2>
+  <div class="left">
+    <div class="contact_details">
+      <div class="icon">
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+      <div class="details">
+        <h5>Location</h5>
+        <p>Sector 82, Mohali</p>
+      </div>
+    </div>
+    <div class="contact_details">
+      <div class="icon">
+        <i class="fa-solid fa-phone"></i>
+      </div>
+      <div class="details">
+        <h5>Phone</h5>
+        <p>+91 62032 68298</p>
+      </div>
+    </div>
+    <div class="contact_details">
+      <div class="icon">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="details">
+        <h5>Email</h5>
+        <p>dilkhush&#64;yopmail.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <form class="contact_us_form" (ngSubmit)="sendFormData()">
+      <input type="text" placeholder="Your Name" name="name"  [(ngModel)] = "formData.name" required/>
+      <input type="email" placeholder="Your Email" name="email"  [(ngModel)] = "formData.email" required/>
+      <input type="text" placeholder="Your Phone" name="phone" [(ngModel)] = "formData.phone"/>
+      <input type="text" placeholder="Subject" name="subject" [(ngModel)] = "formData.subject" />
+      <textarea placeholder="Start Writing Message here ...." name="message" [(ngModel)] = "formData.message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
